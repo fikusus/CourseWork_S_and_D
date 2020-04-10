@@ -36,8 +36,11 @@
             // 
             // taskList
             // 
-            this.taskList.BackColor = System.Drawing.SystemColors.Control;
-            this.taskList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taskList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
+            this.taskList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.taskList.Cursor = System.Windows.Forms.Cursors.Default;
+            this.taskList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taskList.ForeColor = System.Drawing.SystemColors.Window;
             this.taskList.Location = new System.Drawing.Point(32, 105);
             this.taskList.Multiline = true;
             this.taskList.Name = "taskList";
@@ -45,10 +48,11 @@
             this.taskList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.taskList.Size = new System.Drawing.Size(328, 318);
             this.taskList.TabIndex = 0;
+            this.taskList.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
             this.panel1.Controls.Add(this.titleLable);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -58,10 +62,11 @@
             // titleLable
             // 
             this.titleLable.AutoSize = true;
-            this.titleLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.titleLable.Location = new System.Drawing.Point(12, 26);
+            this.titleLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLable.ForeColor = System.Drawing.SystemColors.Control;
+            this.titleLable.Location = new System.Drawing.Point(6, 26);
             this.titleLable.Name = "titleLable";
-            this.titleLable.Size = new System.Drawing.Size(362, 31);
+            this.titleLable.Size = new System.Drawing.Size(382, 31);
             this.titleLable.TabIndex = 0;
             this.titleLable.Text = "ЗАВДАННЯ НА СЬОГОДНІ";
             // 
@@ -69,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(393, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.taskList);

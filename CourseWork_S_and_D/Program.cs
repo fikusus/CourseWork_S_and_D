@@ -22,6 +22,7 @@ namespace CourseWork_S_and_D
             Notificator notificator = new Notificator();
             MainForm mainForm = new MainForm();
             Thread notify = new Thread(notificator.Run);
+            notify.IsBackground = true;
             notify.Start(mainForm.Icon);
             Application.Run(new MainForm());
             notify.Abort();

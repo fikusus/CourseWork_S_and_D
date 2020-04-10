@@ -21,10 +21,10 @@ namespace CourseWork_S_and_D
 ;
             while (true)
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(10000);
                 DateTime current = DateTime.Now;
-                DateTime past = current.AddMilliseconds(-1000);
-                if((NI.BalloonTipText = Controller.controller.TasksCalendarText(past, current)) != String.Empty) 
+                DateTime past = current.AddMilliseconds(-10000);
+                if((NI.BalloonTipText = Controller.controller.TasksCalendarText(past, current)) != "Завдання відсутні") 
                 NI.ShowBalloonTip(1000);
             }
         }

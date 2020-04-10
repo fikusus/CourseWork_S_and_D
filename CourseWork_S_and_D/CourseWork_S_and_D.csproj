@@ -46,44 +46,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AddForm.cs">
+    <Compile Include="View\AddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddForm.Designer.cs">
+    <Compile Include="View\AddForm.Designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CoiseChangeTaskForm.cs">
+    <Compile Include="View\CoiseChangeTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CoiseChangeTaskForm.Designer.cs">
+    <Compile Include="View\CoiseChangeTaskForm.Designer.cs">
       <DependentUpon>CoiseChangeTaskForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller.cs" />
-    <Compile Include="Forms\MainForm.cs">
+    <Compile Include="Control\Controller.cs" />
+    <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainForm.Designer.cs">
+    <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Notificator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task.cs" />
-    <Compile Include="TaskIO.cs" />
-    <Compile Include="TaskList.cs" />
-    <Compile Include="Forms\TaskListForm.cs">
+    <Compile Include="Model\Task.cs" />
+    <Compile Include="Model\TaskIO.cs" />
+    <Compile Include="Model\TaskList.cs" />
+    <Compile Include="View\TaskListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\TaskListForm.Designer.cs">
+    <Compile Include="View\TaskListForm.Designer.cs">
       <DependentUpon>TaskListForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\AddForm.resx">
+    <EmbeddedResource Include="View\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CoiseChangeTaskForm.resx">
+    <EmbeddedResource Include="View\CoiseChangeTaskForm.resx">
       <DependentUpon>CoiseChangeTaskForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainForm.resx">
+    <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -96,7 +96,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Forms\TaskListForm.resx">
+    <EmbeddedResource Include="View\TaskListForm.resx">
       <DependentUpon>TaskListForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

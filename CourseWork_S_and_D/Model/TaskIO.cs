@@ -74,7 +74,7 @@ namespace CourseWork_S_and_D
                 }
             }catch(Exception e)
             {
-                MessageBox.Show("Помилка при зчитуванні з файлу. Створення нового файлу збереження", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+                MessageBox.Show("Файл збереження відсутній або пошкоджений. Створення нового файлу збереження", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                 File.Create(fileName).Close();
             }
         }

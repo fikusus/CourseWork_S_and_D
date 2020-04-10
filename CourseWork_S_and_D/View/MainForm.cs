@@ -39,13 +39,23 @@ namespace CourseWork_S_and_D
         {
             if(Controller.controller.GetCountOfTasks() == 0)
             {
-                MessageBox.Show("Спочатку додайте хоча б одну задачу", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+                MessageBox.Show("Спочатку додайте хоча б одне завдання", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             }
             else
             {
                 CoiseChangeTaskForm coiseChangeTaskForm = new CoiseChangeTaskForm();
                 coiseChangeTaskForm.ShowDialog();
             }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            this.HelpButtonClicked += new CancelEventHandler(HBClicked);
+        }
+        private void HBClicked(object sender, CancelEventArgs e) //сам обработчик
+        {
+            MessageBox.Show("'Учиться, учиться и еще раз учиться!'\n В.И. Ленин"); //действия, которые будут выполняться при щелчке по HelpButton
+            e.Cancel = true;
         }
     }
 }

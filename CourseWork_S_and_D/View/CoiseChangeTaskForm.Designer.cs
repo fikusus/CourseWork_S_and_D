@@ -53,8 +53,14 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
+            this.listBox1.IntegralHeight = false;
+            this.listBox1.ItemHeight = 24;
             this.listBox1.Location = new System.Drawing.Point(12, 79);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(447, 316);
@@ -63,12 +69,18 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(630, 347);
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(208)))), ((int)(((byte)(239)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(146)))), ((int)(((byte)(188)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(630, 334);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 48);
+            this.button1.Size = new System.Drawing.Size(142, 61);
             this.button1.TabIndex = 14;
-            this.button1.Text = "Внести зміни";
+            this.button1.Text = "Внести \r\nзміни";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -86,8 +98,8 @@
             // 
             // intervalNumericUpDown
             // 
-            this.intervalNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.intervalNumericUpDown.Location = new System.Drawing.Point(108, 74);
+            this.intervalNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.intervalNumericUpDown.Location = new System.Drawing.Point(106, 73);
             this.intervalNumericUpDown.Maximum = new decimal(new int[] {
             604800,
             0,
@@ -99,7 +111,7 @@
             0,
             0});
             this.intervalNumericUpDown.Name = "intervalNumericUpDown";
-            this.intervalNumericUpDown.Size = new System.Drawing.Size(120, 23);
+            this.intervalNumericUpDown.Size = new System.Drawing.Size(120, 26);
             this.intervalNumericUpDown.TabIndex = 8;
             this.intervalNumericUpDown.Value = new decimal(new int[] {
             3600,
@@ -173,7 +185,7 @@
             this.titleInputBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.titleInputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleInputBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.titleInputBox.Location = new System.Drawing.Point(555, 34);
+            this.titleInputBox.Location = new System.Drawing.Point(555, 33);
             this.titleInputBox.Name = "titleInputBox";
             this.titleInputBox.Size = new System.Drawing.Size(200, 29);
             this.titleInputBox.TabIndex = 9;
@@ -226,18 +238,24 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(473, 347);
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(208)))), ((int)(((byte)(239)))));
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(146)))), ((int)(((byte)(188)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(473, 334);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 48);
+            this.button2.Size = new System.Drawing.Size(142, 61);
             this.button2.TabIndex = 16;
-            this.button2.Text = "Видалити задачу";
+            this.button2.Text = "Видалити завдання";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
@@ -247,18 +265,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(54, 14);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(23, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(347, 33);
+            this.label1.Size = new System.Drawing.Size(413, 33);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Зміна параметрів задачі";
+            this.label1.Text = "Зміна параметрів завдання";
             // 
             // CoiseChangeTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(791, 409);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
@@ -274,7 +293,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CoiseChangeTaskForm";
-            this.Text = "CoiseChangeTaskForm";
+            this.Text = "Зміна параметрів";
             this.Load += new System.EventHandler(this.CoiseChangeTaskForm_Load);
             this.repeatedTimeInputPanel.ResumeLayout(false);
             this.repeatedTimeInputPanel.PerformLayout();

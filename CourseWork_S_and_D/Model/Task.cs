@@ -120,7 +120,7 @@ namespace CourseWork_S_and_D
             String str = String.Empty;
             if (IsRepeated)
             {
-                str += "'" + Title + "'" + " З: " + start.ToString("dd.MM.yyyy HH:mm") + " До: " + end.ToString("dd.MM.yyyy HH:mm") + " з інтервалом: " + interval + " хвилин";
+                str += "'" + Title + "'" + " З: " + start.ToString("dd.MM.yyyy HH:mm") + " До: " + end.ToString("dd.MM.yyyy HH:mm") + " з інтервалом: " + interval + " хв";
                 if (IsActive)
                 {
                     str += ", активна";

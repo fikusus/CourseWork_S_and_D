@@ -17,30 +17,6 @@ namespace CourseWork_S_and_D
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void CoiseChangeTaskForm_Load(object sender, EventArgs e)
         {
@@ -106,7 +82,7 @@ namespace CourseWork_S_and_D
         {
             if (Controller.controller.RemoveTaskFromTaskList(listBox1.SelectedIndex))
             {
-                MessageBox.Show("Задача успішно видалена", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+                MessageBox.Show("Завдання успішно видалено", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             }
             else
             {
@@ -124,7 +100,7 @@ namespace CourseWork_S_and_D
                     if (endDate.Value > startDate.Value)
                     {
                         Controller.controller.ChangeDateInTaskList(this.listBox1.SelectedIndex, titleInputBox.Text, this.startDate.Value, this.endDate.Value, Decimal.ToInt32(this.intervalNumericUpDown.Value), activeCheckBox.Checked);
-                        MessageBox.Show("Задача успішно змінена", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+                        MessageBox.Show("Завдання успішно змінено", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                     }
                     else
                     {
@@ -134,12 +110,12 @@ namespace CourseWork_S_and_D
                 else
                 {
                     Controller.controller.ChangeDateInTaskList(this.listBox1.SelectedIndex, titleInputBox.Text, this.startDate.Value, activeCheckBox.Checked);
-                    MessageBox.Show("Задача успішно змінена", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+                    MessageBox.Show("Завдання успішно змінено", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                 }
             }
             else
             {
-                MessageBox.Show("Назва задачі не може бути порожньою", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+                MessageBox.Show("Назва завдання не може бути порожньою", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             }
             UpdateList(false);
         }

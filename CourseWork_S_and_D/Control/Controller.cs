@@ -56,9 +56,13 @@ namespace CourseWork_S_and_D
 
         public String TasksCalendarText(DateTime start, DateTime end)
         {
+            SortedDictionary<DateTime?, HashSet<Task>> currCalendarTasks = tasks.Calendar(start, end);
+            if(currCalendarTasks.Count == 0)
+            {
+                return "Завдання відсутні";
+            }
             int day = -1;
             StringBuilder stringBuilder = new StringBuilder();
-            SortedDictionary<DateTime?, HashSet<Task>> currCalendarTasks = tasks.Calendar(start, end);
             foreach (var item in currCalendarTasks.Keys)
             {
                 HashSet<Task> temp;
@@ -77,7 +81,7 @@ namespace CourseWork_S_and_D
                 foreach (var item2 in temp)
                 {
       
-                    stringBuilder.Append(Environment.NewLine).Append("         Задача ").Append(item2.Title).Append(" ").Append(item.Value.ToShortTimeString());
+                    stringBuilder.Append(Environment.NewLine).Append("         Завдання ").Append(item2.Title).Append(" ").Append(item.Value.ToShortTimeString());
                 }
             }
             return stringBuilder.ToString();

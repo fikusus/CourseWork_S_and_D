@@ -58,16 +58,18 @@
             // newTaskText
             // 
             this.newTaskText.AutoSize = true;
-            this.newTaskText.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.newTaskText.Location = new System.Drawing.Point(9, 18);
+            this.newTaskText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
+            this.newTaskText.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.newTaskText.ForeColor = System.Drawing.SystemColors.Control;
+            this.newTaskText.Location = new System.Drawing.Point(12, 23);
             this.newTaskText.Name = "newTaskText";
-            this.newTaskText.Size = new System.Drawing.Size(286, 42);
+            this.newTaskText.Size = new System.Drawing.Size(278, 33);
             this.newTaskText.TabIndex = 2;
-            this.newTaskText.Text = "НОВА ЗАДАЧА";
+            this.newTaskText.Text = "НОВЕ ЗАВДАННЯ";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DimGray;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
             this.panel2.Controls.Add(this.newTaskText);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -76,13 +78,20 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(69, 380);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(208)))), ((int)(((byte)(239)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(146)))), ((int)(((byte)(188)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(70, 381);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 48);
+            this.button1.Size = new System.Drawing.Size(162, 48);
             this.button1.TabIndex = 8;
             this.button1.Text = "Додати задачу";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // repeatedTimeInputPanel
@@ -99,8 +108,8 @@
             // 
             // intervalNumericUpDown
             // 
-            this.intervalNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.intervalNumericUpDown.Location = new System.Drawing.Point(108, 74);
+            this.intervalNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.intervalNumericUpDown.Location = new System.Drawing.Point(119, 74);
             this.intervalNumericUpDown.Maximum = new decimal(new int[] {
             604800,
             0,
@@ -112,7 +121,7 @@
             0,
             0});
             this.intervalNumericUpDown.Name = "intervalNumericUpDown";
-            this.intervalNumericUpDown.Size = new System.Drawing.Size(120, 23);
+            this.intervalNumericUpDown.Size = new System.Drawing.Size(120, 26);
             this.intervalNumericUpDown.TabIndex = 8;
             this.intervalNumericUpDown.Value = new decimal(new int[] {
             3600,
@@ -125,7 +134,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(12, 73);
+            this.label5.Location = new System.Drawing.Point(25, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 24);
             this.label5.TabIndex = 9;
@@ -228,9 +237,9 @@
             // 
             this.titleInputBox.BackColor = System.Drawing.Color.Snow;
             this.titleInputBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.titleInputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleInputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleInputBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.titleInputBox.Location = new System.Drawing.Point(82, 89);
+            this.titleInputBox.Location = new System.Drawing.Point(82, 87);
             this.titleInputBox.Name = "titleInputBox";
             this.titleInputBox.Size = new System.Drawing.Size(200, 29);
             this.titleInputBox.TabIndex = 0;
@@ -301,8 +310,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(301, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
+            this.ClientSize = new System.Drawing.Size(302, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.repeatedTimeInputPanel);
             this.Controls.Add(this.panel2);
@@ -314,7 +323,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddForm";
-            this.Text = "AddForm";
+            this.Text = "Додавання завдання";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.repeatedTimeInputPanel.ResumeLayout(false);
