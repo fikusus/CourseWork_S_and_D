@@ -1,10 +1,6 @@
-﻿using CourseWork_S_and_D.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CourseWork_S_and_D
 {
@@ -12,6 +8,7 @@ namespace CourseWork_S_and_D
     {
         public static Controller controller = new Controller();
         private TaskList tasks = new TaskList();
+
         private Controller()
         {
             TaskIO.ReadTasks(tasks, "tasks.txt");
@@ -22,21 +19,24 @@ namespace CourseWork_S_and_D
             tasks.AddTask(task);
             SaveData();
         }
+
         public Task GetTaskFromTaskList(int index)
         {
             return tasks.GetTask(index);
         }
+
         public bool RemoveTaskFromTaskList(int index)
         {
             bool result = tasks.RemoveTask(tasks.GetTask(index));
             SaveData();
             return result;
-
         }
+
         public int GetCountOfTasks()
         {
             return tasks.Size();
         }
+
         public void ChangeDateInTaskList(int index, String title, DateTime time, bool activity)
         {
             Task task = tasks.GetTask(index);
@@ -45,6 +45,7 @@ namespace CourseWork_S_and_D
             task.IsActive = activity;
             SaveData();
         }
+
         public void ChangeDateInTaskList(int index, String title, DateTime start,DateTime end, int interval, bool activity)
         {
             Task task = tasks.GetTask(index);
@@ -74,18 +75,14 @@ namespace CourseWork_S_and_D
                         stringBuilder.Append(Environment.NewLine);
                     }
                     day = item.Value.Day;
-                    
                     stringBuilder.Append("На дату ").Append(item.Value.ToShortDateString());
                 }
-
                 foreach (var item2 in temp)
                 {
-      
                     stringBuilder.Append(Environment.NewLine).Append("         Завдання ").Append(item2.Title).Append(" ").Append(item.Value.ToShortTimeString());
                 }
             }
             return stringBuilder.ToString();
-        
         }
 
         public String[] GetTaskListInfo()

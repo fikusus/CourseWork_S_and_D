@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourseWork_S_and_D
@@ -12,32 +8,40 @@ namespace CourseWork_S_and_D
     {
         public static void WriteTasks(TaskList tasks, String fileName)
         {
-            using (BinaryWriter binary = new BinaryWriter(File.Open(fileName, FileMode.Create)))
+            try
             {
-                if (tasks.Size() == 0)
+                using (BinaryWriter binary = new BinaryWriter(File.Open(fileName, FileMode.Create)))
                 {
-                    return;
-                }
-                binary.Write(tasks.Size());
-                for (int i = 0;i < tasks.Size(); i++)
-                {
-                    Task temp = tasks.GetTask(i);
-                    binary.Write(temp.Title);
-                    binary.Write(temp.IsActive);
-                    binary.Write(temp.IsRepeated);
-                    if (temp.IsRepeated)
+                    if (tasks.Size() == 0)
                     {
-                        binary.Write(temp.GetStartTime().ToBinary());
-                        binary.Write(temp.GetEndTime().ToBinary());
-                        binary.Write(temp.GetRepeatInterval());
+                        return;
                     }
-                    else
+                    binary.Write(tasks.Size());
+                    for (int i = 0; i < tasks.Size(); i++)
                     {
-                        binary.Write(temp.GetTime().ToBinary());
+                        Task temp = tasks.GetTask(i);
+                        binary.Write(temp.Title);
+                        binary.Write(temp.IsActive);
+                        binary.Write(temp.IsRepeated);
+                        if (temp.IsRepeated)
+                        {
+                            binary.Write(temp.GetStartTime().ToBinary());
+                            binary.Write(temp.GetEndTime().ToBinary());
+                            binary.Write(temp.GetRepeatInterval());
+                        }
+                        else
+                        {
+                            binary.Write(temp.GetTime().ToBinary());
+                        }
                     }
                 }
+            }catch (Exception)
+            {
+                MessageBox.Show("Файл збереження відсутній або пошкоджений. Створення нового файлу збереження", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+                File.Create(fileName).Close();
             }
         }
+
         public static void ReadTasks(TaskList tasks, String fileName)
         {
             try
@@ -72,7 +76,7 @@ namespace CourseWork_S_and_D
                         }
                     }
                 }
-            }catch(Exception e)
+            }catch(Exception)
             {
                 MessageBox.Show("Файл збереження відсутній або пошкоджений. Створення нового файлу збереження", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                 File.Create(fileName).Close();

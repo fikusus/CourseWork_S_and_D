@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourseWork_S_and_D
@@ -16,6 +10,7 @@ namespace CourseWork_S_and_D
         {
             InitializeComponent();
             ClearForm();
+            this.HelpButtonClicked += new CancelEventHandler(HBClicked);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -70,6 +65,15 @@ namespace CourseWork_S_and_D
             endDate.Value = DateTime.Now.AddHours(2);
             repeatedCheckBox.Checked = false;
             this.intervalNumericUpDown.Value = 3600;
+        }
+        private void HBClicked(object sender, CancelEventArgs e) //сам обработчик
+        {
+            MessageBox.Show("Для створення нового завдання:\n\n" +
+                "Введіть назву нового завдання в полі «Назва».\n\n" + 
+                "Натисніть прапорець біля пункту «Повторюване завдання», якщо нове завдання не є одноразовим.\n\n" + 
+                "В полі «Дата виконання» введіть вручну час(години та хвилини) та введіть вручну або оберіть в календарі дату(число, місяць та рік) виконання завдання.\n\n" + 
+                "Для того, щоб зберегти задачу натисніть кнопку «Додати завдання».");
+            e.Cancel = true;
         }
     }
 }

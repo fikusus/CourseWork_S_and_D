@@ -9,6 +9,7 @@ namespace CourseWork_S_and_D
     class TaskList
     {
         List<Task> tasks = new List<Task>();
+
         public void AddTask(Task task)
         {
             tasks.Add(task);
@@ -18,14 +19,17 @@ namespace CourseWork_S_and_D
         {
             return tasks.Remove(task);
         }
+
         public int Size()
         {
             return tasks.Count;
         }
+
         public Task GetTask(int index)
         {
             return tasks.ElementAt(index);
         }
+
         public SortedDictionary<DateTime?, HashSet<Task>> Calendar(DateTime start, DateTime end)
         {
             HashSet<Task> buffSet = new HashSet<Task>();
@@ -67,5 +71,4 @@ namespace CourseWork_S_and_D
             return stringBuilder.ToString();
         }
     }
-    
 }

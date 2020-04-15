@@ -86,11 +86,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(70, 381);
+            this.button1.Location = new System.Drawing.Point(69, 377);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 48);
+            this.button1.Size = new System.Drawing.Size(162, 60);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Додати задачу";
+            this.button1.Text = "Додати завдання";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -227,9 +227,9 @@
             this.repeatedCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.repeatedCheckBox.Location = new System.Drawing.Point(12, 124);
             this.repeatedCheckBox.Name = "repeatedCheckBox";
-            this.repeatedCheckBox.Size = new System.Drawing.Size(216, 28);
+            this.repeatedCheckBox.Size = new System.Drawing.Size(240, 28);
             this.repeatedCheckBox.TabIndex = 3;
-            this.repeatedCheckBox.Text = "Повторювана задача";
+            this.repeatedCheckBox.Text = "Повторюване завдання";
             this.repeatedCheckBox.UseVisualStyleBackColor = true;
             this.repeatedCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -320,6 +320,7 @@
             this.Controls.Add(this.titleInputBox);
             this.Controls.Add(this.timeInputPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddForm";

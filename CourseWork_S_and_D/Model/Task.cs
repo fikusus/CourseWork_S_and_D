@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CourseWork_S_and_D
 {
@@ -18,14 +16,14 @@ namespace CourseWork_S_and_D
 
         public Task(string title, DateTime time)
         {
-            Title = title ?? throw new ArgumentNullException(nameof(title));
+            Title = title;
             this.time = DateCorrector(time);
             IsRepeated = false;     
         }
 
         public Task(string title, DateTime start, DateTime end, int interval)
         {
-            Title = title ?? throw new ArgumentNullException(nameof(title));
+            Title = title;
             this.start = DateCorrector(start);
             this.end = DateCorrector(end);
             this.interval = interval;
@@ -37,6 +35,7 @@ namespace CourseWork_S_and_D
             IsRepeated = false;
             this.time = DateCorrector(time);
         }
+
         public void SetTime(DateTime start, DateTime end, int interval)
         {
             IsRepeated = true;
@@ -61,6 +60,7 @@ namespace CourseWork_S_and_D
         {
             return GetTime();
         }
+
         public DateTime GetEndTime()
         {
             if (IsRepeated)
@@ -72,6 +72,7 @@ namespace CourseWork_S_and_D
                 return time;
             }
         }
+
         public int GetRepeatInterval()
         {
             if (IsRepeated)
@@ -83,6 +84,7 @@ namespace CourseWork_S_and_D
                 return 0;
             }
         }
+
         public DateTime? nextTimeAfter(DateTime current)
         {
             if (IsRepeated)
@@ -118,31 +120,26 @@ namespace CourseWork_S_and_D
         public override string ToString()
         {
             String str = String.Empty;
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("'").Append(Title).Append("'");
             if (IsRepeated)
             {
-                str += "'" + Title + "'" + " З: " + start.ToString("dd.MM.yyyy HH:mm") + " До: " + end.ToString("dd.MM.yyyy HH:mm") + " з інтервалом: " + interval + " хв";
-                if (IsActive)
-                {
-                    str += ", активна";
-                }
-                else
-                {
-                    str += ", не активна";
-                }
+                stringBuilder.Append(" З: ").Append(start.ToString("dd.MM.yyyy HH:mm")).Append(" До: ").Append(end.ToString("dd.MM.yyyy HH:mm")).Append(" з інтервалом: ").Append(interval).Append(" хв");
             }
             else
             {
-                str = "'" + Title + "'" + " На час: " + time.ToString("dd.MM.yyyy HH:mm");
-                if (IsActive)
-                {
-                    str += ", активна";
-                }
-                else
-                {
-                    str += ", не активна";
-                }
+                stringBuilder.Append(" На час: ").Append(time.ToString("dd.MM.yyyy HH:mm"));
+
             }
-            return str;
+            if (IsActive)
+            {
+                stringBuilder.Append(", активна");
+            }
+            else
+            {
+                stringBuilder.Append(", не активна");
+            }
+            return stringBuilder.ToString();
 
         }
 

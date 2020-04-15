@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourseWork_S_and_D
@@ -20,6 +14,7 @@ namespace CourseWork_S_and_D
         CalendarType type;
         public TaskListForm(CalendarType type)
         {
+            Cursor.Current = Cursors.WaitCursor;
             InitializeComponent();
             this.type = type;
             switch (type)
@@ -39,5 +34,9 @@ namespace CourseWork_S_and_D
             }
         }
 
+        protected override void OnShown(EventArgs e)
+        {
+            Cursor.Current = Cursors.Default;
+        }
     }
 }

@@ -290,6 +290,7 @@
             this.Controls.Add(this.timeInputPanel);
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CoiseChangeTaskForm";

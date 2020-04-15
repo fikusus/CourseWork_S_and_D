@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourseWork_S_and_D
@@ -15,12 +9,11 @@ namespace CourseWork_S_and_D
         public CoiseChangeTaskForm()
         {
             InitializeComponent();
+            this.HelpButtonClicked += new CancelEventHandler(HBClicked);
         }
-
 
         private void CoiseChangeTaskForm_Load(object sender, EventArgs e)
         {
-
             UpdateList(true);
             UpdateInfo(0);
         }
@@ -60,7 +53,6 @@ namespace CourseWork_S_and_D
                 int oldIndex = listBox1.SelectedIndex;
                 listBox1.Items.Clear();
                 listBox1.Items.AddRange(Controller.controller.GetTaskListInfo());
-
                 listBox1.SelectedIndex = (setFirst) ? 0 : oldIndex;
             }
         }
@@ -118,6 +110,11 @@ namespace CourseWork_S_and_D
                 MessageBox.Show("Назва завдання не може бути порожньою", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             }
             UpdateList(false);
+        }
+        private void HBClicked(object sender, CancelEventArgs e){ //сам обработчик
+            MessageBox.Show("Обравши завдання зі списку можна змінити його ім’я, дату та час виконання, стан завдання (активний чи неактивний), параметр повторюваності завдання. Для того, щоб зберегти зміни для задачі натисніть кнопку «Внести зміни».\n\n" +
+                            "Для того, щоб видалити завдання зі списку оберіть його та натисніть «Видалити завдання».");
+            e.Cancel = true;
         }
     }
 
