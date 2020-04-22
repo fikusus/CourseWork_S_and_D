@@ -146,7 +146,6 @@
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "Розклад завдань";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

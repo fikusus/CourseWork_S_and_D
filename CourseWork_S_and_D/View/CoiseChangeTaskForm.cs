@@ -20,7 +20,6 @@ namespace CourseWork_S_and_D
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine(listBox1.SelectedIndex);
             UpdateInfo(listBox1.SelectedIndex);
         }
 
@@ -111,7 +110,7 @@ namespace CourseWork_S_and_D
             }
             UpdateList(false);
         }
-        private void HBClicked(object sender, CancelEventArgs e){ //сам обработчик
+        private void HBClicked(object sender, CancelEventArgs e){ 
             MessageBox.Show("Обравши завдання зі списку можна змінити його ім’я, дату та час виконання, стан завдання (активний чи неактивний), параметр повторюваності завдання. Для того, щоб зберегти зміни для задачі натисніть кнопку «Внести зміни».\n\n" +
                             "Для того, щоб видалити завдання зі списку оберіть його та натисніть «Видалити завдання».");
             e.Cancel = true;

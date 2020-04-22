@@ -14,9 +14,15 @@ namespace CourseWork_S_and_D
             TaskIO.ReadTasks(tasks, "tasks.txt");
         }
 
-        public void AddTask(Task task)
+        public void AddTask(string title, DateTime start, DateTime end, int interval)
         {
-            tasks.AddTask(task);
+            tasks.AddTask(new Task(title,start,end,interval));
+            SaveData();
+        }
+
+        public void AddTask(string title, DateTime time)
+        {
+            tasks.AddTask(new Task(title,time));
             SaveData();
         }
 

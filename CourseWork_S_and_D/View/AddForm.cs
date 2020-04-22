@@ -16,7 +16,7 @@ namespace CourseWork_S_and_D
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
-                this.repeatedTimeInputPanel.Visible = this.repeatedCheckBox.Checked;
+            this.repeatedTimeInputPanel.Visible = this.repeatedCheckBox.Checked;
             if (this.repeatedCheckBox.Checked)
             {
                 this.startTimeTitle.Text = "Дата початку виконання";
@@ -35,8 +35,7 @@ namespace CourseWork_S_and_D
                 {
                     if(endDate.Value > startDate.Value)
                     {
-                        Task task = new Task(this.titleInputBox.Text, this.startDate.Value, this.endDate.Value, Decimal.ToInt32(this.intervalNumericUpDown.Value));
-                        Controller.controller.AddTask(task);
+                        Controller.controller.AddTask(this.titleInputBox.Text, this.startDate.Value, this.endDate.Value, Decimal.ToInt32(this.intervalNumericUpDown.Value));
                         MessageBox.Show("Завдання успішно додане", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                         ClearForm();
                     }
@@ -47,8 +46,7 @@ namespace CourseWork_S_and_D
                 }
                 else
                 {
-                    Task task = new Task(this.titleInputBox.Text, this.startDate.Value);
-                    Controller.controller.AddTask(task);
+                    Controller.controller.AddTask(this.titleInputBox.Text, this.startDate.Value);
                     MessageBox.Show("Завдання успішно додане", "Повідомлення",MessageBoxButtons.OK,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1,MessageBoxOptions.DefaultDesktopOnly);
                     ClearForm();
                 }
@@ -66,7 +64,7 @@ namespace CourseWork_S_and_D
             repeatedCheckBox.Checked = false;
             this.intervalNumericUpDown.Value = 3600;
         }
-        private void HBClicked(object sender, CancelEventArgs e) //сам обработчик
+        private void HBClicked(object sender, CancelEventArgs e) 
         {
             MessageBox.Show("Для створення нового завдання:\n\n" +
                 "Введіть назву нового завдання в полі «Назва».\n\n" + 

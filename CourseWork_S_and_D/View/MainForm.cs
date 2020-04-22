@@ -55,10 +55,5 @@ namespace CourseWork_S_and_D
                 "Для того, щоб внести зміні або видалити завдання зі списку оберіть у головному меню «Змінити/видалити завдання»"); 
             e.Cancel = true;
         }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

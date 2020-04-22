@@ -6,9 +6,6 @@ namespace CourseWork_S_and_D
 {
     static class Program
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
         [STAThread]
         static void Main()
         {   
