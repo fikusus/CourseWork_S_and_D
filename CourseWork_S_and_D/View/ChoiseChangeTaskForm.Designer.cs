@@ -1,6 +1,6 @@
 ﻿namespace CourseWork_S_and_D
 {
-    partial class CoiseChangeTaskForm
+    partial class ChoiseChangeTaskForm
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(447, 316);
             this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
             // 
             // button1
             // 
@@ -82,7 +82,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Внести \r\nзміни";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.Change_Btn_Click);
             // 
             // repeatedTimeInputPanel
             // 
@@ -166,7 +166,7 @@
             this.repeatedCheckBox.TabIndex = 11;
             this.repeatedCheckBox.Text = "Повторювана задача";
             this.repeatedCheckBox.UseVisualStyleBackColor = true;
-            this.repeatedCheckBox.CheckedChanged += new System.EventHandler(this.repeatedCheckBox_CheckedChanged);
+            this.repeatedCheckBox.CheckedChanged += new System.EventHandler(this.IsRepeated_CheckBox_CheckedChanged);
             // 
             // titleText
             // 
@@ -251,7 +251,7 @@
             this.button2.TabIndex = 16;
             this.button2.Text = "Видалити завдання";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button2.Click += new System.EventHandler(this.Remove_Btn_Click);
             // 
             // panel1
             // 
@@ -295,7 +295,7 @@
             this.MinimizeBox = false;
             this.Name = "CoiseChangeTaskForm";
             this.Text = "Зміна параметрів";
-            this.Load += new System.EventHandler(this.CoiseChangeTaskForm_Load);
+            this.Load += new System.EventHandler(this.ChoiseChangeTaskForm_Load);
             this.repeatedTimeInputPanel.ResumeLayout(false);
             this.repeatedTimeInputPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intervalNumericUpDown)).EndInit();

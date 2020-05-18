@@ -52,11 +52,11 @@
     <Compile Include="View\AddForm.Designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\CoiseChangeTaskForm.cs">
+    <Compile Include="View\ChoiseChangeTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\CoiseChangeTaskForm.Designer.cs">
-      <DependentUpon>CoiseChangeTaskForm.cs</DependentUpon>
+    <Compile Include="View\ChoiseChangeTaskForm.Designer.cs">
+      <DependentUpon>ChoiseChangeTaskForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\Controller.cs" />
     <Compile Include="View\MainForm.cs">
@@ -80,8 +80,8 @@
     <EmbeddedResource Include="View\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\CoiseChangeTaskForm.resx">
-      <DependentUpon>CoiseChangeTaskForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\ChoiseChangeTaskForm.resx">
+      <DependentUpon>ChoiseChangeTaskForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -99,6 +99,7 @@
     <EmbeddedResource Include="View\TaskListForm.resx">
       <DependentUpon>TaskListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

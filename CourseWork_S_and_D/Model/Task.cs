@@ -119,7 +119,6 @@ namespace CourseWork_S_and_D
 
         public override string ToString()
         {
-            String str = String.Empty;
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("'").Append(Title).Append("'");
             if (IsRepeated)
@@ -150,7 +149,7 @@ namespace CourseWork_S_and_D
 
         public override int GetHashCode()
         {
-            var hashCode = -1678590704;
+            int hashCode = -1678590704;
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Title);
             hashCode = hashCode * -1521134295 + time.GetHashCode();
             hashCode = hashCode * -1521134295 + start.GetHashCode();

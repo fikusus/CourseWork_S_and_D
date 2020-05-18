@@ -10,10 +10,10 @@ namespace CourseWork_S_and_D
         {
             InitializeComponent();
             ClearForm();
-            this.HelpButtonClicked += new CancelEventHandler(HBClicked);
+            this.HelpButtonClicked += new CancelEventHandler(Help_Btn_Clicked);
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void IsRepeated_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
 
             this.repeatedTimeInputPanel.Visible = this.repeatedCheckBox.Checked;
@@ -27,7 +27,7 @@ namespace CourseWork_S_and_D
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Add_Task_Btn_Click(object sender, EventArgs e)
         {
             if(this.titleInputBox.Text!= String.Empty)
             {
@@ -64,7 +64,7 @@ namespace CourseWork_S_and_D
             repeatedCheckBox.Checked = false;
             this.intervalNumericUpDown.Value = 3600;
         }
-        private void HBClicked(object sender, CancelEventArgs e) 
+        private void Help_Btn_Clicked(object sender, CancelEventArgs e) 
         {
             MessageBox.Show("Для створення нового завдання:\n\n" +
                 "Введіть назву нового завдання в полі «Назва».\n\n" + 

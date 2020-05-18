@@ -12,25 +12,22 @@ namespace CourseWork_S_and_D
             this.HelpButtonClicked += new CancelEventHandler(HBClicked);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddForm_OpenBtn_Click(object sender, EventArgs e)
         {
-            AddForm addForm = new AddForm();
-            addForm.ShowDialog();
+            new AddForm().ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void TaskForToday_OpenBtn_Click(object sender, EventArgs e)
         {
-            TaskListForm taskListForm = new TaskListForm(CalendarType.Today);
-            taskListForm.ShowDialog();
+            new TaskListForm(CalendarType.Today).ShowDialog(); ;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void TaskForWeek_OpenBtn_Click(object sender, EventArgs e)
         {
-            TaskListForm taskListForm = new TaskListForm(CalendarType.Week);
-            taskListForm.ShowDialog();
+            new TaskListForm(CalendarType.Week).ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void ChangeTask_OpenBtn_Click(object sender, EventArgs e)
         {
             if(Controller.controller.GetCountOfTasks() == 0)
             {
@@ -38,8 +35,7 @@ namespace CourseWork_S_and_D
             }
             else
             {
-                CoiseChangeTaskForm coiseChangeTaskForm = new CoiseChangeTaskForm();
-                coiseChangeTaskForm.ShowDialog();
+                new ChoiseChangeTaskForm().ShowDialog(); 
             }
         }
 

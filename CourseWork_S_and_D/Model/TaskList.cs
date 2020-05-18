@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CourseWork_S_and_D
 {
@@ -33,7 +32,7 @@ namespace CourseWork_S_and_D
         public SortedDictionary<DateTime?, HashSet<Task>> Calendar(DateTime start, DateTime end)
         {
             HashSet<Task> buffSet = new HashSet<Task>();
-            SortedDictionary < DateTime?, HashSet < Task >> myMap = new SortedDictionary<DateTime?, HashSet<Task>>();
+            SortedDictionary <DateTime?, HashSet <Task>> myMap = new SortedDictionary<DateTime?, HashSet<Task>>();
             foreach (Task item in tasks)
             {
                 if (item.IsActive)

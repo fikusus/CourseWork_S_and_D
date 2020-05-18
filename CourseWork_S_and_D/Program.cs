@@ -11,12 +11,11 @@ namespace CourseWork_S_and_D
         {   
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Notificator notificator = new Notificator();
             MainForm mainForm = new MainForm();
-            Thread notify = new Thread(notificator.Run);
+            Thread notify = new Thread(new Notificator().Run);
             notify.IsBackground = true;
             notify.Start(mainForm.Icon);
-            Application.Run(new MainForm());
+            Application.Run(mainForm);
             notify.Abort();
         }     
     }

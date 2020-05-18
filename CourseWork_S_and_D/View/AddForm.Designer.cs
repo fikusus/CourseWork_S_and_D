@@ -30,7 +30,7 @@
         {
             this.newTaskText = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Add_Task_Btn = new System.Windows.Forms.Button();
             this.repeatedTimeInputPanel = new System.Windows.Forms.Panel();
             this.intervalNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -76,23 +76,23 @@
             this.panel2.Size = new System.Drawing.Size(311, 75);
             this.panel2.TabIndex = 7;
             // 
-            // button1
+            // Add_Task_Btn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(208)))), ((int)(((byte)(239)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(146)))), ((int)(((byte)(188)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(69, 377);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 60);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Додати завдання";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Add_Task_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
+            this.Add_Task_Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(208)))), ((int)(((byte)(239)))));
+            this.Add_Task_Btn.FlatAppearance.BorderSize = 2;
+            this.Add_Task_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(146)))), ((int)(((byte)(188)))));
+            this.Add_Task_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
+            this.Add_Task_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_Task_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Add_Task_Btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.Add_Task_Btn.Location = new System.Drawing.Point(69, 377);
+            this.Add_Task_Btn.Name = "Add_Task_Btn";
+            this.Add_Task_Btn.Size = new System.Drawing.Size(162, 60);
+            this.Add_Task_Btn.TabIndex = 8;
+            this.Add_Task_Btn.Text = "Додати завдання";
+            this.Add_Task_Btn.UseVisualStyleBackColor = false;
+            this.Add_Task_Btn.Click += new System.EventHandler(this.Add_Task_Btn_Click);
             // 
             // repeatedTimeInputPanel
             // 
@@ -231,7 +231,7 @@
             this.repeatedCheckBox.TabIndex = 3;
             this.repeatedCheckBox.Text = "Повторюване завдання";
             this.repeatedCheckBox.UseVisualStyleBackColor = true;
-            this.repeatedCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.repeatedCheckBox.CheckedChanged += new System.EventHandler(this.IsRepeated_CheckBox_CheckedChanged);
             // 
             // titleInputBox
             // 
@@ -312,7 +312,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(302, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Add_Task_Btn);
             this.Controls.Add(this.repeatedTimeInputPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.repeatedCheckBox);
@@ -341,7 +341,7 @@
         #endregion
         private System.Windows.Forms.Label newTaskText;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Add_Task_Btn;
         private System.Windows.Forms.Panel repeatedTimeInputPanel;
         private System.Windows.Forms.NumericUpDown intervalNumericUpDown;
         private System.Windows.Forms.Label label5;

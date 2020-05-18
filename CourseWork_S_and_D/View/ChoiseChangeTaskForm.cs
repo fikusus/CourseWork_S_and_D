@@ -4,21 +4,21 @@ using System.Windows.Forms;
 
 namespace CourseWork_S_and_D
 {
-    public partial class CoiseChangeTaskForm : Form
+    public partial class ChoiseChangeTaskForm : Form
     {
-        public CoiseChangeTaskForm()
+        public ChoiseChangeTaskForm()
         {
             InitializeComponent();
-            this.HelpButtonClicked += new CancelEventHandler(HBClicked);
+            this.HelpButtonClicked += new CancelEventHandler(Help_Btn_Clicked);
         }
 
-        private void CoiseChangeTaskForm_Load(object sender, EventArgs e)
+        private void ChoiseChangeTaskForm_Load(object sender, EventArgs e)
         {
             UpdateList(true);
             UpdateInfo(0);
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateInfo(listBox1.SelectedIndex);
         }
@@ -56,7 +56,7 @@ namespace CourseWork_S_and_D
             }
         }
 
-        private void repeatedCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void IsRepeated_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
             this.repeatedTimeInputPanel.Visible = this.repeatedCheckBox.Checked;
             if (this.repeatedCheckBox.Checked)
@@ -69,7 +69,7 @@ namespace CourseWork_S_and_D
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void Remove_Btn_Click(object sender, EventArgs e)
         {
             if (Controller.controller.RemoveTaskFromTaskList(listBox1.SelectedIndex))
             {
@@ -82,7 +82,7 @@ namespace CourseWork_S_and_D
             UpdateList(true);
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Change_Btn_Click(object sender, EventArgs e)
         {
             if (this.titleInputBox.Text != String.Empty)
             {
@@ -110,7 +110,8 @@ namespace CourseWork_S_and_D
             }
             UpdateList(false);
         }
-        private void HBClicked(object sender, CancelEventArgs e){ 
+        private void Help_Btn_Clicked(object sender, CancelEventArgs e)
+        { 
             MessageBox.Show("Обравши завдання зі списку можна змінити його ім’я, дату та час виконання, стан завдання (активний чи неактивний), параметр повторюваності завдання. Для того, щоб зберегти зміни для задачі натисніть кнопку «Внести зміни».\n\n" +
                             "Для того, щоб видалити завдання зі списку оберіть його та натисніть «Видалити завдання».");
             e.Cancel = true;

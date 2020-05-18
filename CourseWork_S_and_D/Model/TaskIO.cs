@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace CourseWork_S_and_D
 {
-    class TaskIO
+    static class TaskIO
     {
         public static void WriteTasks(TaskList tasks, String fileName)
         {

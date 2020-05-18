@@ -9,18 +9,16 @@ namespace CourseWork_S_and_D
     {
         public void Run(object icon)
         {
-            NotifyIcon NI = new NotifyIcon();
-            NI.BalloonTipTitle = "Нагадування";
-            NI.BalloonTipIcon = ToolTipIcon.Info;
-            NI.Visible = true;
-            NI.Icon = (Icon)icon;
+            NotifyIcon notyfyIcon = new NotifyIcon();
+            notyfyIcon.BalloonTipTitle = "Нагадування";
+            notyfyIcon.BalloonTipIcon = ToolTipIcon.Info;
+            notyfyIcon.Visible = true;
+            notyfyIcon.Icon = (Icon)icon;
             while (true)
             {
                 Thread.Sleep(10000);
-                DateTime current = DateTime.Now;
-                DateTime past = current.AddMilliseconds(-10000);
-                if((NI.BalloonTipText = Controller.controller.TasksCalendarText(past, current)) != "Завдання відсутні") 
-                NI.ShowBalloonTip(1000);
+                if((notyfyIcon.BalloonTipText = Controller.controller.TasksCalendarText(DateTime.Now, DateTime.Now.AddMilliseconds(-10000))) != "Завдання відсутні") 
+                notyfyIcon.ShowBalloonTip(1000);
             }
         }
     }
