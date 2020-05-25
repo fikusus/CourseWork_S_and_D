@@ -83,7 +83,7 @@ namespace CourseWork_S_and_D
             startDate.Value = DateTime.Now.AddHours(1);
             endDate.Value = DateTime.Now.AddHours(2);
             repeatedCheckBox.Checked = false;
-            this.intervalNumericUpDown.Value = 3600;
+            this.intervalNumericUpDown.Value = 60;
         }
 
         /// <summary>

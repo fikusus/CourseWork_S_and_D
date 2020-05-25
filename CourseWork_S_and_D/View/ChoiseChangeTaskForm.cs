@@ -17,18 +17,10 @@ namespace CourseWork_S_and_D
         {
             InitializeComponent();
             this.HelpButtonClicked += new CancelEventHandler(Help_Btn_Clicked);
-        }
-
-        /// <summary>
-        /// A method that updates the form the first time it is loaded.
-        /// </summary>
-        /// <param name="sender">The object that caused the event</param>
-        /// <param name="e">Information and arguments for this event</param>
-        private void ChoiseChangeTaskForm_Load(object sender, EventArgs e)
-        {
             UpdateList(true);
             UpdateInfo(0);
         }
+
 
         /// <summary>
         /// Method processing the selection of a new element from the list.

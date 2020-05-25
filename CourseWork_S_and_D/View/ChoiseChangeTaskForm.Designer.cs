@@ -295,7 +295,6 @@
             this.MinimizeBox = false;
             this.Name = "CoiseChangeTaskForm";
             this.Text = "Зміна параметрів";
-            this.Load += new System.EventHandler(this.ChoiseChangeTaskForm_Load);
             this.repeatedTimeInputPanel.ResumeLayout(false);
             this.repeatedTimeInputPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intervalNumericUpDown)).EndInit();
