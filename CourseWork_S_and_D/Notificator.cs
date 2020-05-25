@@ -5,8 +5,15 @@ using System.Windows.Forms;
 
 namespace CourseWork_S_and_D
 {
+    /// <summary>
+    /// A class that informs the user about a planned task.
+    /// </summary>
     class Notificator
-    {
+    {/// <summary>
+     /// The method works in a separate thread. 
+     /// Displays a "bubble" notification about the task for the current time.
+     /// </summary>
+     /// <param name="icon">Image of the application in the tray</param>
         public void Run(object icon)
         {
             NotifyIcon notyfyIcon = new NotifyIcon();

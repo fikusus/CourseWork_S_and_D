@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.Add_Task_Btn = new System.Windows.Forms.Button();
             this.repeatedTimeInputPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.intervalNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.endTimeTitle = new System.Windows.Forms.Label();
@@ -96,6 +97,7 @@
             // 
             // repeatedTimeInputPanel
             // 
+            this.repeatedTimeInputPanel.Controls.Add(this.label1);
             this.repeatedTimeInputPanel.Controls.Add(this.intervalNumericUpDown);
             this.repeatedTimeInputPanel.Controls.Add(this.label5);
             this.repeatedTimeInputPanel.Controls.Add(this.endTimeTitle);
@@ -105,6 +107,17 @@
             this.repeatedTimeInputPanel.Size = new System.Drawing.Size(299, 114);
             this.repeatedTimeInputPanel.TabIndex = 7;
             this.repeatedTimeInputPanel.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(241, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 24);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "хв.";
             // 
             // intervalNumericUpDown
             // 
@@ -124,7 +137,7 @@
             this.intervalNumericUpDown.Size = new System.Drawing.Size(120, 26);
             this.intervalNumericUpDown.TabIndex = 8;
             this.intervalNumericUpDown.Value = new decimal(new int[] {
-            3600,
+            60,
             0,
             0,
             0});
@@ -359,5 +372,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label titleText;
+        private System.Windows.Forms.Label label1;
     }
 }

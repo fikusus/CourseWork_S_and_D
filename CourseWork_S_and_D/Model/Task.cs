@@ -4,23 +4,66 @@ using System.Text;
 
 namespace CourseWork_S_and_D
 {
+    /// <summary>
+    /// A class that represents each individual 
+    /// task and the functionality to work with it.
+    /// </summary>
     class Task
     {
+        /// <summary>
+        /// The title of the task.
+        /// </summary>
         public String Title { get; set; }
+
+        /// <summary>
+        /// Time to complete a non-recurring task.
+        /// </summary>
         private DateTime time;
+
+        /// <summary>
+        /// The start time of the recurring task.
+        /// </summary>
         private DateTime start;
+
+        /// <summary>
+        /// The end time of the recurring task.
+        /// </summary>
         private DateTime end;
+
+        /// <summary>
+        /// Interval of recurring task.
+        /// </summary>
         private int interval;
+
+        /// <summary>
+        /// Field containing information about the recurrence of the task.
+        /// </summary>
         public bool IsRepeated { get; private set; }
+
+        /// <summary>
+        /// Field containing information about the activity of the task
+        /// </summary>
         public bool IsActive { get; set; } = true;
 
+        /// <summary>
+        /// Сonstructor for a not-repetitive task.
+        /// </summary>
+        /// <param name="title">The name of the new task</param>
+        /// <param name="time">Date to execute a new task</param>
         public Task(string title, DateTime time)
         {
             Title = title;
             this.time = DateCorrector(time);
-            IsRepeated = false;     
+            IsRepeated = false;
         }
 
+        /// <summary>
+        /// Сonstructor for a repetitive task.
+        /// </summary>
+        /// <param name="title">The name of the new task</param>
+        /// <param name="start">Start date of the new task</param>
+        /// <param name="end">End date of the new task</param>
+        /// <param name="interval">Interval for repeating a new task</param>
         public Task(string title, DateTime start, DateTime end, int interval)
         {
             Title = title;
@@ -30,12 +73,23 @@ namespace CourseWork_S_and_D
             IsRepeated = true;
         }
 
+        /// <summary>
+        /// Method for setting a new execution date for a non-repeatable task.
+        /// </summary>
+        /// <param name="time">New task execution date</param>
         public void SetTime(DateTime time)
         {
             IsRepeated = false;
             this.time = DateCorrector(time);
         }
 
+        /// <summary>
+        /// Method for setting a new start and end date, 
+        /// and interval for repeating for a repeatable task.
+        /// </summary>
+        /// <param name="start">New task start date</param>
+        /// <param name="end">New task end date</param>
+        /// <param name="interval">New task interval for repeating</param>
         public void SetTime(DateTime start, DateTime end, int interval)
         {
             IsRepeated = true;
@@ -44,6 +98,11 @@ namespace CourseWork_S_and_D
             this.interval = interval;
         }
 
+        /// <summary>
+        /// Method for getting the date of execution.
+        /// </summary>
+        /// <returns>Returns the execution date of a non-repeatable task, 
+        /// or the start date of a repeatable task.</returns>
         public DateTime GetTime()
         {
             if (IsRepeated)
@@ -56,11 +115,21 @@ namespace CourseWork_S_and_D
             }
         }
 
+        /// <summary>
+        /// Method to get the start date of the task.
+        /// </summary>
+        /// <returns>Returns the start date of a repeatable task, 
+        /// or the execution date of a non-repeatable task.</returns>
         public DateTime GetStartTime()
         {
             return GetTime();
         }
 
+        /// <summary>
+        /// Method to get the end date of the task.
+        /// </summary>
+        /// <returns>Returns the end date of a repeatable task, 
+        /// or the execution date of a non-repeatable task.</returns>
         public DateTime GetEndTime()
         {
             if (IsRepeated)
@@ -73,6 +142,11 @@ namespace CourseWork_S_and_D
             }
         }
 
+        /// <summary>
+        /// Method to get interval for repeating of the task.
+        /// </summary>
+        /// <returns>Returns the interval for repeating of a repeatable task, 
+        /// or 0 for a non-repeatable task.</returns>
         public int GetRepeatInterval()
         {
             if (IsRepeated)
@@ -85,16 +159,21 @@ namespace CourseWork_S_and_D
             }
         }
 
+        /// <summary>
+        /// A method that determines the time of the next task after a certain date.
+        /// </summary>
+        /// <param name="current">The date after which the task should be executed.</param>
+        /// <returns>Returns the time of the next task execution after a certain date, if one exists.</returns>
         public DateTime? nextTimeAfter(DateTime current)
         {
             if (IsRepeated)
             {
                 DateTime tempDate = start;
-                while(tempDate <= current)
+                while (tempDate <= current)
                 {
                     tempDate = tempDate.AddMinutes(interval);
                 }
-                if(tempDate <= end)
+                if (tempDate <= end)
                 {
                     return tempDate;
                 }
@@ -105,7 +184,7 @@ namespace CourseWork_S_and_D
             }
             else
             {
-                if(time <= current)
+                if (time <= current)
                 {
                     return null;
                 }
@@ -117,6 +196,10 @@ namespace CourseWork_S_and_D
             }
         }
 
+        /// <summary>
+        /// An overloaded method for converting an object to a structured string.
+        /// </summary>
+        /// <returns>Returns a string with information about the task</returns>
         public override string ToString()
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -142,11 +225,21 @@ namespace CourseWork_S_and_D
 
         }
 
+        /// <summary>
+        /// Method for entering all dates in one format.
+        /// Removes everything in less than a minute.
+        /// </summary>
+        /// <param name="input">Date for correction</param>
+        /// <returns>Returns the corrected date</returns>
         private DateTime DateCorrector(DateTime input)
         {
             return new DateTime(input.Year, input.Month, input.Day, input.Hour, input.Minute, 0);
         }
 
+        /// <summary>
+        /// The method creates a unique hash code for the object.
+        /// </summary>
+        /// <returns>Returns the hash code of the object</returns>
         public override int GetHashCode()
         {
             int hashCode = -1678590704;

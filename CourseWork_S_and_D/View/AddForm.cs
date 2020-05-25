@@ -4,8 +4,15 @@ using System.Windows.Forms;
 
 namespace CourseWork_S_and_D
 {
+    /// <summary>
+    /// A class that represents a form of adding 
+    /// a new task and processing custom input.
+    /// </summary>
     public partial class AddForm : Form
     {
+        /// <summary>
+        /// A class constructor that performs basic user interface initialization
+        /// </summary>
         public AddForm()
         {
             InitializeComponent();
@@ -13,6 +20,11 @@ namespace CourseWork_S_and_D
             this.HelpButtonClicked += new CancelEventHandler(Help_Btn_Clicked);
         }
 
+        /// <summary>
+        /// A method that handles clicking the Repeated CheckBox
+        /// </summary>
+        /// <param name="sender">The object that caused the event</param>
+        /// <param name="e">Information and arguments for this event</param>
         private void IsRepeated_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -27,6 +39,11 @@ namespace CourseWork_S_and_D
             }
         }
 
+        /// <summary>
+        /// A method that handles clicking the add button.
+        /// </summary>
+        /// <param name="sender">The object that caused the event</param>
+        /// <param name="e">Information and arguments for this event</param>
         private void Add_Task_Btn_Click(object sender, EventArgs e)
         {
             if(this.titleInputBox.Text!= String.Empty)
@@ -56,6 +73,10 @@ namespace CourseWork_S_and_D
                 MessageBox.Show("Назва завдання не може бути порожньою", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             }
         }
+
+        /// <summary>
+        /// The method resets the form to the original state.
+        /// </summary>
         private void ClearForm()
         {
             this.titleInputBox.Text = String.Empty;
@@ -64,6 +85,12 @@ namespace CourseWork_S_and_D
             repeatedCheckBox.Checked = false;
             this.intervalNumericUpDown.Value = 3600;
         }
+
+        /// <summary>
+        /// A method that handles clicking the help button.
+        /// </summary>
+        /// <param name="sender">The object that caused the event</param>
+        /// <param name="e">The object to indicate the reasons for closing the form</param>
         private void Help_Btn_Clicked(object sender, CancelEventArgs e) 
         {
             MessageBox.Show("Для створення нового завдання:\n\n" +
@@ -73,5 +100,6 @@ namespace CourseWork_S_and_D
                 "Для того, щоб зберегти задачу натисніть кнопку «Додати завдання».");
             e.Cancel = true;
         }
+
     }
 }

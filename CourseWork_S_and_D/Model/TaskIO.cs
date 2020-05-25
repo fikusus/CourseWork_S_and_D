@@ -3,9 +3,18 @@ using System.IO;
 using System.Windows.Forms;
 
 namespace CourseWork_S_and_D
-{
+{/// <summary>
+/// A class that provides the ability to 
+/// save and read created tasks.
+/// </summary>
     static class TaskIO
     {
+        /// <summary>
+        /// Method for saving data about tasks 
+        /// to a special saving file in binary format.
+        /// </summary>
+        /// <param name="tasks">An array of tasks to save</param>
+        /// <param name="fileName">The path to the save file</param>
         public static void WriteTasks(TaskList tasks, String fileName)
         {
             try
@@ -42,6 +51,11 @@ namespace CourseWork_S_and_D
             }
         }
 
+        /// <summary>
+        /// Method for reading binary task data from a file to an array.
+        /// </summary>
+        /// <param name="tasks">An array in which to read the data</param>
+        /// <param name="fileName">The path to the save file</param>
         public static void ReadTasks(TaskList tasks, String fileName)
         {
             try

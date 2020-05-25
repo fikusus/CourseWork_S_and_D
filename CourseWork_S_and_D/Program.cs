@@ -3,10 +3,17 @@ using System.Threading;
 using System.Windows.Forms;
 
 namespace CourseWork_S_and_D
-{
+{/// <summary>
+/// The main class of the program. 
+/// Contains a method to run all the functionality.
+/// </summary>
     static class Program
     {
-        [STAThread]
+        /// <summary>
+        /// The main method of the program. 
+        /// Responsible for the primary initialization of all components. 
+        /// Launches notification and graphical interfaces.
+        /// </summary>
         static void Main()
         {   
             Application.EnableVisualStyles();
